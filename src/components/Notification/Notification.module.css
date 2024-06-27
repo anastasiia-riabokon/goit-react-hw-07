@@ -1,4 +1,6 @@
 .notice {
   composes: list from "../ContactList/ContactList.module.css";
   font-style: italic;
+  font-size: 24px;
+  text-align: center;
 }
