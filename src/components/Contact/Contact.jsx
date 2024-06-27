@@ -6,7 +6,6 @@ import {deleteContact} from "../../redux/operations";
 
 export const Contact = ({values}) => {
   const {id, name, number} = values;
-  console.log(id);
   const dispatch = useDispatch();
   return (
     <>
