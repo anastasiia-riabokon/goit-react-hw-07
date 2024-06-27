@@ -1,11 +1,10 @@
 import Contact from "../Contact/Contact";
-import css from "./ContactList.module.css";
 
 export const ContactList = ({users}) => {
   return (
-    <ul className={css.list}>
+    <ul className="flex flex-col gap-2 max-h-[350px] overflow-auto px-3">
       {users.map((user) => (
-        <li className={css.item} key={user.id}>
+        <li key={user.id} className="flex items-center justify-between border-b py-1">
           <Contact values={user} />
         </li>
       ))}

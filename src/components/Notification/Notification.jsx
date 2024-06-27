@@ -1,6 +1,8 @@
-import css from "./Notification.module.css";
-
 export const Notification = ({text}) => {
-  return <p className={css.notice}>{text}</p>;
+  return (
+    <div className="text-center text-3xl">
+      <span>{text}</span>
+    </div>
+  );
 };
 export default Notification;

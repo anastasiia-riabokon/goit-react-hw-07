@@ -1,4 +1,3 @@
-import css from "./Contact.module.css";
 import {FaUser} from "react-icons/fa";
 import {BsFillTelephoneFill} from "react-icons/bs";
 import {useDispatch} from "react-redux";
@@ -10,17 +9,17 @@ export const Contact = ({values}) => {
   return (
     <>
       <div>
-        <div className={css.block}>
+        <div className="flex gap-2 items-center">
           <FaUser />
           <p>{name}</p>
         </div>
 
-        <div className={css.block}>
+        <div className="flex gap-2 items-center">
           <BsFillTelephoneFill />
           <p>{number}</p>
         </div>
       </div>
-      <button className={css.btn} onClick={() => dispatch(deleteContact(id))}>
+      <button onClick={() => dispatch(deleteContact(id))} className="btn btn-outline">
         Delete
       </button>
     </>

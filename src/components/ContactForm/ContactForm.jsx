@@ -1,5 +1,4 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
-import css from "./ContactForm.module.css";
 import * as Yup from "yup";
 import ReactInputMask from "react-input-mask";
 import {useId} from "react";
@@ -41,27 +40,29 @@ export const ContactForm = () => {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FeedbackSchema}>
       {({setFieldValue}) => (
-        <Form className={css.form}>
-          <h2 className={css.title}>Add Contact</h2>
-          <label htmlFor="{idFieldName}">
-            <span className={css.label}>Name</span>
-            <Field
-              id={idFieldName}
-              type="text"
+        <Form className="flex justify-center gap-2 mb-8">
+          <label
+            htmlFor="{idFieldName}"
+            className="input input-bordered flex items-center gap-2 max-w-[25%]"
+          >
+            <span>Name</span>
+            <Field id={idFieldName} type="text" name="nameContact" placeholder="John" />
+            <ErrorMessage
               name="nameContact"
-              className={css.field}
-              placeholder="John"
+              component="div"
+              className="absolute transform translate-y-[34px] text-[14px] italic text-red-500"
             />
-            <ErrorMessage name="nameContact" component="div" className={css.message__error} />
           </label>
 
-          <label htmlFor="{idFieldNumber}">
-            <span className={css.label}>Number</span>
+          <label
+            htmlFor="{idFieldNumber}"
+            className="input input-bordered flex items-center gap-2 max-w-[30%]"
+          >
+            <span>Number</span>
             <Field id={idFieldNumber} type="text" name="numberContact" placeholder="123-456-7890">
               {({field}) => (
                 <ReactInputMask
                   {...field}
-                  className={css.field}
                   mask="999-999-9999"
                   maskChar="_"
                   placeholder="___-___-____"
@@ -69,10 +70,14 @@ export const ContactForm = () => {
                 />
               )}
             </Field>
-            <ErrorMessage name="numberContact" component="div" className={css.message__error} />
+            <ErrorMessage
+              name="numberContact"
+              component="div"
+              className="absolute transform translate-y-[34px] text-[14px] italic text-red-500"
+            />
           </label>
 
-          <button className={css.btn} type="submit">
+          <button type="submit" className="btn btn-outline">
             Add contact
           </button>
         </Form>
