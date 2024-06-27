@@ -1,0 +1,53 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 15%;
+  left: 50px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  padding: 20px 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 13px;
+}
+
+.field {
+  border-bottom: 1px solid rgb(109, 19, 109);
+  position: relative;
+
+  &:hover,
+  &:focus {
+    border-color: rgb(203, 42, 144);
+  }
+}
+
+.btn {
+  background-color: rgb(170, 23, 190);
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  transition: background-color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(203, 42, 144);
+  }
+}
+
+.message__error {
+  position: absolute;
+  font-size: 13px;
+  color: red;
+  font-style: italic;
+}

@@ -1,0 +1,4 @@
+.notice {
+  composes: list from "../ContactList/ContactList.module.css";
+  font-style: italic;
+}

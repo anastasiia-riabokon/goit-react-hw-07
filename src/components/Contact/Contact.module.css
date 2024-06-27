@@ -1,0 +1,13 @@
+.block {
+  display: flex;
+  gap: 8px;
+}
+
+.block:first-child {
+  margin-bottom: 15px;
+}
+
+.btn {
+  composes: btn from "../ContactForm/ContactForm.module.css";
+  height: 34px;
+}

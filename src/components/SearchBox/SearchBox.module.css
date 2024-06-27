@@ -1,0 +1,17 @@
+.search__block {
+  position: absolute;
+  top: 15%;
+  right: 50px;
+  background-color: #fff;
+  padding: 10px 20px 20px 20px;
+  width: 50%;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+}
+
+.label {
+  composes: label from "../ContactForm/ContactForm.module.css";
+}
+
+.field {
+  border-bottom: 1px solid black;
+}

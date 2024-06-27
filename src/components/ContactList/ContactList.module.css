@@ -1,0 +1,35 @@
+.list {
+  position: absolute;
+  top: 30%;
+  right: 50px;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background-color: #b326a3;
+  border-radius: 5px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background-color: #b815c1;
+  cursor: pointer;
+}
