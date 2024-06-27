@@ -57,14 +57,14 @@ export const ContactForm = () => {
 
           <label htmlFor="{idFieldNumber}">
             <span className={css.label}>Number</span>
-            <Field id={idFieldNumber} type="text" name="numberContact" placeholder="123-45-67">
+            <Field id={idFieldNumber} type="text" name="numberContact" placeholder="123-456-7890">
               {({field}) => (
                 <ReactInputMask
                   {...field}
                   className={css.field}
-                  mask="999-99-99"
+                  mask="999-999-9999"
                   maskChar="_"
-                  placeholder="___-__-__"
+                  placeholder="___-___-____"
                   onChange={(e) => setFieldValue("numberContact", e.target.value)}
                 />
               )}
