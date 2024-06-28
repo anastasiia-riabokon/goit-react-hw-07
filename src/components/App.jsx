@@ -1,13 +1,19 @@
+import {useEffect} from "react";
+import {useDispatch, useSelector} from "react-redux";
+
+import {fetchContacts} from "../redux/operations";
+import {selectNameFilter} from "../redux/filtersSlice";
+import {
+  selectContacts,
+  selectError,
+  selectFilteredContacts,
+  selectLoading,
+} from "../redux/contactsSlice";
+
 import ContactList from "./ContactList/ContactList";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactForm from "./ContactForm/ContactForm";
 import Notification from "./Notification/Notification";
-import {useDispatch, useSelector} from "react-redux";
-import {selectContacts, selectError, selectLoading} from "../redux/contactsSlice";
-import {selectNameFilter} from "../redux/filtersSlice";
-import {useEffect} from "react";
-import {fetchContacts} from "../redux/operations";
-
 import Title from "./Title/Title";
 import Section from "./Layout/Section";
 import Container from "./Layout/Container";
@@ -18,15 +24,12 @@ function App() {
   const filter = useSelector(selectNameFilter);
   const isLoading = useSelector(selectLoading);
   const isError = useSelector(selectError);
+  const filteredContacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
 
   return (
     <Section>
