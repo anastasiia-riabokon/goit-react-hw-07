@@ -8,7 +8,7 @@ export const SearchBox = () => {
   const idSearch = useId();
   return (
     <div className="mb-7">
-      <h2 className="mb-4 text-center font-semibold">Find contacts by name</h2>
+      <h2 className="mb-4 text-center font-semibold">Find contacts by name or number</h2>
       <label htmlFor={idSearch} className="input input-bordered flex items-center gap-2">
         <input
           type="search"
